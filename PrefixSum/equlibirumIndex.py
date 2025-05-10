@@ -1,3 +1,5 @@
+# Find equlibrium index
+
 def findEquilibriumIndex(nums):
     total_sum = sum(nums)  
     left_sum = 0  
