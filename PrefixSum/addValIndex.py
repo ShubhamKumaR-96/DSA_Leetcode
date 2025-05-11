@@ -16,7 +16,7 @@ def queriesSum(n, queries):
             
         queries -= 1
     
-    # Reconstruct the array
+    # Reconstruct the array 
     A[0] = diff[0]
     for i in range(1, n):
         A[i] = A[i - 1] + diff[i]
