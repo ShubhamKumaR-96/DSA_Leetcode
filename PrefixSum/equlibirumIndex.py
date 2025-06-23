@@ -1,15 +1,29 @@
 # Find equlibrium index
 
 def findEquilibriumIndex(nums):
-    total_sum = sum(nums)  
-    left_sum = 0  
-    
-    for i in range(len(nums)):  
-        if left_sum == total_sum - left_sum - nums[i]:  # Equilibrium condition
-            return i  # Return index
-        left_sum += nums[i]  
-    
-    return -1  # If no equilibrium index found
+    n=len(nums)
+    left_sum=0
+    right_sum=0
+
+    pf=[0]*n
+    pf[0]=nums[0]
+
+    for i in range(1,n):
+        pf[i]=pf[i-1]+nums[i]
+
+
+    for i in range(n):
+        if i==0:
+            left_sum=0
+        else:
+            left_sum=pf[i-1]    
+        right_sum=pf[n-1]-pf[i]
+
+        if left_sum==right_sum:
+            return i
+    return -1        
+            
+
 
 # Example usage
 nums = [-7, 1, 5, 2, -4, 3, 0]
