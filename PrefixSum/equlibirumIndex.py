@@ -13,10 +13,8 @@ def findEquilibriumIndex(nums):
 
 
     for i in range(n):
-        if i==0:
-            left_sum=0
-        else:
-            left_sum=pf[i-1]    
+        
+        left_sum=pf[i-1]    
         right_sum=pf[n-1]-pf[i]
 
         if left_sum==right_sum:
