@@ -1,6 +1,5 @@
 # Given an array of positive integers. find maximum k such that there is no subarray of 
 # length k with sum > B   A=3 2 5 4 6 3 7 2 B=20
-
 def findMaxK(A,b):
     n=len(A)
 
